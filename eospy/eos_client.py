@@ -34,6 +34,9 @@ class EosClient:
     def wallet_lock(self, wallet='default'):
         return self.wallet_request(endpoints.WALLET_LOCK, wallet)
 
+    def wallet_unlock(self, key, wallet='default'):
+        return self.wallet_request(endpoints.WALLET_UNLOCK, [wallet, key])
+
     def wallet_open(self, wallet='default'):
         return self.wallet_request(endpoints.WALLET_OPEN, wallet)
 
